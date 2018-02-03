@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import entity.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.alibaba.dubbo.config.annotation.Service;
@@ -22,5 +23,9 @@ public class BrandServiceImpl implements BrandService {
 		return brandMapper.selectByExample(null);
 	}
 
-	
+	@Override
+	public PageResult findPage(int pageNum, int pageSize) {
+		return null;
+	}
+
 }
