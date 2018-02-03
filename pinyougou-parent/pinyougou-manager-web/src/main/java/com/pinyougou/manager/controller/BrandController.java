@@ -12,13 +12,12 @@ import com.pinyougou.sellergoods.service.BrandService;
 @RestController
 @RequestMapping("/brand")
 public class BrandController {
-
 	@Reference
 	private BrandService brandService;
-	
-	@RequestMapping("/findAll")
-	public List<TbBrand> findAll(){
-		return brandService.findAll();		
+
+	@RequestMapping("/findAll.do")
+	public List<TbBrand> findAll() {
+		return brandService.listOfBrand();
 	}
-	
+
 }
